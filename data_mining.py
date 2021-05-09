@@ -155,4 +155,4 @@ waist = 60
 hips = 100
 print('call')
 res = recommend(model, age, height, bust, waist, hips)
-print(res.to_json(orient="index"))
+print(res)
