@@ -153,6 +153,5 @@ height = 160
 bust = 100
 waist = 60
 hips = 100
-print('call')
 res = recommend(model, age, height, bust, waist, hips)
 print(res)
