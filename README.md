@@ -16,6 +16,6 @@
 ## step 2: Modify input(unnecessary)
 ###    - At bottom of data_mining.py file, modify input: age, height, bust, waist, hips
 ## step 3: Run data_mining.py
-###    - At terminal or command in project fouder, press: 
+###    - At terminal or command in project file, press: 
 ####        + python3 data_mining.py: if your device has python2 and python3
 ####        + python data_mining.py: if your device has single python3
