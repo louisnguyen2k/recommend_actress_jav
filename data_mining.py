@@ -9,10 +9,11 @@ import warnings
 warnings.filterwarnings("ignore")
 
 actress = pd.read_csv('actress_clean.csv')
-actress['birthday'] = pd.to_datetime(actress['birthday'], yearfirst= True)
+actress['birthday'] = pd.to_datetime(actress['birthday'], yearfirst=True)
 # print(actress)
 todays_date = date.today()
-actress['age'] = (todays_date.year - pd.DatetimeIndex(actress['birthday']).year) * 1.0
+actress['age'] = (todays_date.year -
+                  pd.DatetimeIndex(actress['birthday']).year) * 1.0
 
 df = actress[['age', 'height', 'bust', 'waist', 'hips']]
 # print(df)
@@ -110,7 +111,7 @@ result = k_mean_4.labels_
 # )
 # plt.scatter(
 #     model.cluster_centers_[:, 0], model.cluster_centers_[:, 4],
-#     marker='*',s=250, 
+#     marker='*',s=250,
 #     c='red',
 #     label='centroids',
 #     edgecolors='black'
@@ -136,6 +137,8 @@ lookup['cluster'] = result
 
 # recommend actress function
 #
+
+
 def recommend(model, age, height, bust, waist, hips):
     arr = np.array([[age, height, bust, waist, hips]])
     pred = model.predict(arr)
